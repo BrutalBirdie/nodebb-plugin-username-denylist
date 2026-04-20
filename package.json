@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/brutalbirdie/nodebb-plugin-username-denylist#readme",
   "nbbpm": {
-    "compatibility": "^3.0.0"
+    "compatibility": "^4.0.0"
   }
 }

@@ -10,7 +10,7 @@
   "staticDirs": { "static": "./static" },
   "templates": "static/templates",
   "languages": "languages",
-  "acpScripts": [
-    "static/lib/admin.js"
-  ]
+  "modules": {
+    "../admin/plugins/username-denylist.js": "./static/lib/admin.js"
+  }
 }

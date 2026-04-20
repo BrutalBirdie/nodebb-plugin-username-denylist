@@ -2,6 +2,10 @@
 
 A NodeBB plugin that lets administrators block usernames at registration time using a configurable denylist of literal usernames and/or regular expression patterns.
 
+## Compatibility
+
+Tested against **NodeBB v4.10.3**. Declared compatibility range: `^4.0.0` (any NodeBB v4.x). Earlier major versions (v3 and below) are not supported because this plugin uses the v4 ACP module-loading pattern (`plugin.json → modules` with ES module syntax).
+
 ## Features
 
 - Two-list ACP form: literal usernames (case-insensitive) and JavaScript regex patterns.
