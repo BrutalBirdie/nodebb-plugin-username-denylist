@@ -29,8 +29,22 @@ plugin.addAdminNavigation = function (header) {
 
 plugin.checkUsername = async function (data) {
 	const username = data && data.userData && data.userData.username;
+	await assertUsernameAllowed(username);
+	return data;
+};
+
+plugin.checkUsernameOnUpdate = async function (data) {
+	try {
+		await assertUsernameAllowed(data && data.username);
+	} catch (err) {
+		data.error = err;
+	}
+	return data;
+};
+
+async function assertUsernameAllowed(username) {
 	if (!username || typeof username !== 'string') {
-		return data;
+		return;
 	}
 
 	const settings = await meta.settings.get(PLUGIN_ID);
@@ -53,9 +67,7 @@ plugin.checkUsername = async function (data) {
 			throw new Error(ERROR_KEY);
 		}
 	}
-
-	return data;
-};
+}
 
 function parseLines(value) {
 	if (!value || typeof value !== 'string') {

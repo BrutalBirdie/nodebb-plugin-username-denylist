@@ -9,9 +9,11 @@ Tested against **NodeBB v4.10.3**. Declared compatibility range: `^4.0.0` (any N
 ## Features
 
 - Two-list ACP form: literal usernames (case-insensitive) and JavaScript regex patterns.
-- Hooks into `filter:register.check` so blocked sign-ups never reach user creation.
+- Enforced on **every** username entry point:
+  - standard registration form (`filter:register.check`),
+  - OAuth/SSO interstitial username choice and any post-creation rename — admin-driven or self-service (`filter:username.check`).
 - Invalid regex patterns are skipped and logged via `winston.warn`; valid patterns continue to apply.
-- i18n-ready error message shown directly on the registration form.
+- i18n-ready error message shown directly on the form that triggered the rejection.
 
 ## Install
 
