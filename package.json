@@ -1,0 +1,28 @@
+{
+  "name": "nodebb-plugin-username-denylist",
+  "version": "1.0.0",
+  "description": "Block usernames during registration via a configurable denylist of literals and regex patterns",
+  "main": "library.js",
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "nodebb-plugin",
+    "username",
+    "denylist",
+    "blacklist",
+    "registration"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brutalbirdie/nodebb-plugin-username-denylist.git"
+  },
+  "author": "Elias Hackradt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brutalbirdie/nodebb-plugin-username-denylist/issues"
+  },
+  "homepage": "https://github.com/brutalbirdie/nodebb-plugin-username-denylist#readme",
+  "nbbpm": {
+    "compatibility": "^3.0.0"
+  }
+}

@@ -1,0 +1,10 @@
+{
+	"title": "Username Denylist",
+	"literals-label": "Denylisted usernames",
+	"literals-help": "One username per line. Matched case-insensitively against the registration username.",
+	"patterns-label": "Denylisted patterns",
+	"patterns-help": "One JavaScript regular expression per line. Bare form (e.g. <code>^mod[0-9]+$</code>) or slash-delimited form with flags (e.g. <code>/staff/i</code>) are both supported. Invalid patterns are skipped and logged.",
+	"save": "Save Settings",
+	"saved": "Settings saved",
+	"error.username-not-allowed": "Sorry, that username is not allowed. Please choose another."
+}
