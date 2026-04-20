@@ -42,6 +42,12 @@ plugin.checkUsernameOnUpdate = async function (data) {
 	return data;
 };
 
+plugin.checkUsernameOnCreate = async function (data) {
+	const username = data && data.user && data.user.username;
+	await assertUsernameAllowed(username);
+	return data;
+};
+
 async function assertUsernameAllowed(username) {
 	if (!username || typeof username !== 'string') {
 		return;
