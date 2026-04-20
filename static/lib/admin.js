@@ -1,18 +1,22 @@
 'use strict';
 
-define('admin/plugins/username-denylist', ['settings', 'alerts'], function (Settings, alerts) {
+/* globals $, app, define */
+
+define('admin/plugins/username-denylist', ['settings'], function (Settings) {
 	const ACP = {};
 
 	ACP.init = function () {
+		console.log('[username-denylist] ACP module loaded');
+
 		Settings.load('username-denylist', $('.username-denylist-settings'));
 
-		$('#save').on('click', function () {
+		$('#save').off('click').on('click', function () {
 			Settings.save('username-denylist', $('.username-denylist-settings'), function () {
-				alerts.alert({
+				app.alert({
 					type: 'success',
 					alert_id: 'username-denylist-saved',
-					title: '[[username-denylist:title]]',
-					message: '[[username-denylist:saved]]',
+					title: 'Username Denylist',
+					message: 'Settings saved.',
 					timeout: 2500,
 				});
 			});
