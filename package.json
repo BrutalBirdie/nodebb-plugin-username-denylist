@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brutalbirdie/nodebb-plugin-username-denylist.git"
+    "url": "https://github.com/BrutalBirdie/nodebb-plugin-username-denylist"
   },
   "author": "Elias Hackradt",
   "license": "MIT",
