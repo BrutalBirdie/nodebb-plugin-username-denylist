@@ -22,6 +22,6 @@ jobs:
           registry-url: "https://registry.npmjs.org"
 
       - name: Publish to npm
+        # Uses npm Trusted Publishing (OIDC) — no NPM_TOKEN needed.
+        # Requires a Trusted Publisher to be configured for this package on npmjs.com.
         run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
