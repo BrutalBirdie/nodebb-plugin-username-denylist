@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-username-denylist",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Block usernames during registration via a configurable denylist of literals and regex patterns",
   "main": "library.js",
   "keywords": [

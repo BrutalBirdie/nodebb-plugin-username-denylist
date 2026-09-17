@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-09-17
+
+### Fixed
+- ACP settings page labels rendering as raw `[[username-denylist:…]]` tokens on NodeBB v4.15.0+, which removed whole-page translation. The template now uses the `{{tx(...)}}` helper.
+
+### Changed
+- Minimum NodeBB version raised to `^4.14.0`, the first release shipping the `{{tx(...)}}` helper.
+
 ## [1.0.0] - 2026-04-23
 
 Initial public release.
@@ -24,4 +32,5 @@ Initial public release.
 ### Compatibility
 - NodeBB `^4.0.0` (tested against v4.10.3). NodeBB v3 and below are not supported: the ACP module is loaded through the v4 `plugin.json → modules` mechanism using ES module syntax.
 
-[1.0.0]: https://github.com/brutalbirdie/nodebb-plugin-username-denylist/releases/tag/v1.0.0
+[1.1.0]: https://github.com/brutalbirdie/nodebb-plugin-username-denylist/compare/1.0.0...1.1.0
+[1.0.0]: https://github.com/brutalbirdie/nodebb-plugin-username-denylist/releases/tag/1.0.0
