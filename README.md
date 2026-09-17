@@ -4,7 +4,7 @@ A NodeBB plugin that lets administrators block usernames at registration time us
 
 ## Compatibility
 
-Tested against **NodeBB v4.10.3**. Declared compatibility range: `^4.0.0` (any NodeBB v4.x). Earlier major versions (v3 and below) are not supported because this plugin uses the v4 ACP module-loading pattern (`plugin.json → modules` with ES module syntax).
+Declared compatibility range: `^4.14.0`. The ACP template uses the `{{tx(...)}}` translation helper, which landed in NodeBB v4.14.0 and became mandatory in v4.15.0 when whole-page translation was removed ([`248257914e`](https://github.com/NodeBB/NodeBB/commit/248257914e2c6177a270529bc70017916989cd5c)) — on older builds the settings labels render as raw `[[username-denylist:…]]` tokens. Earlier major versions (v3 and below) are not supported because this plugin uses the v4 ACP module-loading pattern (`plugin.json → modules` with ES module syntax).
 
 ## Features
 
